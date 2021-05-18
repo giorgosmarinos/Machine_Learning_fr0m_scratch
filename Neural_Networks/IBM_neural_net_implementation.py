@@ -18,6 +18,10 @@ class DeepNeuralNetwork():
             return (np.exp(-x)) / ((np.exp(-x) + 1) ** 2)
         return 1 / (1 + np.exp(-x))
 
+    # this should be fixed
+    def relu(self, x):
+        return max(0.0, x)
+
     def softmax(self, x, derivative=False):
         # Numerically stable with large exponentials
         exps = np.exp(x - x.max())
@@ -158,3 +162,5 @@ class DeepNeuralNetwork():
             print('Epoch: {0}, Time Spent: {1:.2f}s, Accuracy: {2:.2f}%'.format(
                 iteration + 1, time.time() - start_time, accuracy * 100
             ))
+
+

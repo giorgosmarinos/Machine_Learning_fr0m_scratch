@@ -1,4 +1,4 @@
-from Datasets.Mnist_dataset import mnist_dataset
+from Datasets.images.Mnist_dataset import mnist_dataset
 from Neural_Networks.IBM_neural_net_implementation import DeepNeuralNetwork
 
 

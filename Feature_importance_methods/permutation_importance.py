@@ -46,18 +46,6 @@ if __name__ == "__main__":
 
     X, y = load_breast_cancer(return_X_y=True)
 
-    for i in y:
-        if i == 1:
-            pass
-        elif i == 0:
-            pass
-        elif i != 1:
-            print("this the number",i)
-        elif i != 0:
-            print("this the number",i)
-
-
-
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
     y_train = y_train.astype(int)
