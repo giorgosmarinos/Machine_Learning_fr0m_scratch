@@ -184,19 +184,19 @@ def decision_tree(train, test, max_depth, min_size):
 # Test CART on Bank Note dataset
 seed(1)
 # load and prepare data
-filename = 'C:\\Users\\geo_m\\Downloads\\data_banknote_authentication.txt'
+filename = 'D:\\PycharmProjects\\Machine_Learning_from_scratch\\Datasets\\classification\\data_banknote_authentication.txt'
 dataset = load_csv(filename)
 
-#print(dataset)
-
-
+splits = get_split(dataset)
+print(pd.DataFrame(splits))
+'''
 # convert string attributes to integers
 for i in range(len(dataset[0])):
 	str_column_to_float(dataset, i)
 
-print(dataset)
+print(pd.DataFrame(dataset))
 
-"""
+
 # evaluate algorithm
 n_folds = 5
 max_depth = 5
@@ -205,4 +205,4 @@ scores = evaluate_algorithm(dataset, decision_tree, n_folds, max_depth, min_size
 print('Scores: %s' % scores)
 print('Mean Accuracy: %.3f%%' % (sum(scores)/float(len(scores))))
 
-"""
+'''
