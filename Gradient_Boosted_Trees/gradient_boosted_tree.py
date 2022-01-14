@@ -7,7 +7,9 @@ from sklearn.metrics import mean_squared_error
 class GradientBoostingFromScratch():
     
     def __init__(self, n_trees, learning_rate, max_depth=1):
-        self.n_trees=n_trees; self.learning_rate=learning_rate; self.max_depth=max_depth;
+        self.n_trees=n_trees 
+        self.learning_rate=learning_rate 
+        self.max_depth=max_depth
         
     def fit(self, x, y):
         self.trees = []
